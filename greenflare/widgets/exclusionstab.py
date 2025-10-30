@@ -54,7 +54,7 @@ class ExclusionsTab(ttk.Frame):
         self.button_remove.pack(side='right')
 
         self.operators = [
-            'Contain', 'Equal to (=)', 'Start with', 'End with', 'Regex match']
+            'Contain', 'Do not contain', 'Equal to (=)', 'Start with', 'End with', 'Regex match']
         self.add_exclusion_widget()
 
     def add_exclusion_widget(self):

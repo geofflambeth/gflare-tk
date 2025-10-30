@@ -221,6 +221,9 @@ class GFlareResponse:
             elif operator == 'Contain':
                 value = escape(value)
                 rules.append(f".*{value}.*")
+            elif operator == 'Do not contain':
+                value = escape(value)
+                rules.append(f"^((?!{value}).)*$")
             elif operator == 'Start with':
                 value = escape(value)
                 rules.append(f"^{value}.*")
